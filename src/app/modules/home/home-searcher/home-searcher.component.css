@@ -1,0 +1,12 @@
+
+.container {
+    columns: 3;
+}
+
+img{
+    margin-bottom: 15px;
+}
+
+app-search-bar{
+    margin: auto;
+}

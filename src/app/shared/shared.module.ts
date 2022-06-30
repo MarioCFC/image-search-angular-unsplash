@@ -6,9 +6,10 @@ import { SearchBarComponent } from "./search-bar/search-bar.component";
 import { MatFormFieldModule, MatIconModule, MatInputModule } from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {MatButtonModule} from '@angular/material/button';
+import { ListPaginatorComponent } from "./list-paginator/list-paginator.component";
 //TODO:Mirar si hay que declarar el servicio
 @NgModule({
-  declarations: [SearchBarComponent],
+  declarations: [SearchBarComponent,ListPaginatorComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -19,7 +20,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatButtonModule,
     MatIconModule
   ],
-  exports: [SearchBarComponent],
+  exports: [SearchBarComponent,ListPaginatorComponent],
   providers: [UnsplashService],
 })
 export class SharedModule {}

@@ -2,35 +2,33 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
 import { SharedModule } from "./shared.module";
 import { Observable } from "rxjs";
+import { IPage } from "./models-interfaces/IPage";
 
 @Injectable()
 export class UnsplashService {
   private readonly unsplashUrl: string = "https://api.unsplash.com/";
-  private client_id = "UNSPLASHA_API_KEY";
+  private client_id = "0DNz7Ioo8lvZ1NlRzMDoTvZurqm81lpP02jIbpI5rpE";
 
   constructor(private http: HttpClient) {}
 
-  query(url: string, parameters: HttpParams) {
-    parameters = parameters.append("client_id", this.client_id);
+  searchImage(query: string, page:number) {
     let options = {
-      params: parameters,
+      params: new HttpParams().append("client_id", this.client_id).append("query", query).append("page",page.toString())
     };
 
-    return this.http.get(url, options);
-  }
-
-
-  searchImage(query: string) {
-    let params = new HttpParams();
-    params = params.append("query", query);
-
     let url = this.unsplashUrl + "search/photos";
-    return this.query(url, params);
+    return this.http.get<IPage>(url, options);
   }
 
   getImageDetails(idImage:string){
+
+
+    let options = {
+      params: new HttpParams().append("client_id", this.client_id)
+    };
+
     let url = this.unsplashUrl + "photos/" + idImage;
-    return this.query(url,null);
+    return this.http.get(url, options);
 
   }
 }

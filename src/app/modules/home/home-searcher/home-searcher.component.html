@@ -1,2 +1,12 @@
-<p>Hola mundo</p>
 <app-search-bar (searchEvent)="getSearchEvent($event)"></app-search-bar>
+
+<div class="container">
+
+    <div *ngFor="let image of imagePageData?.results">
+        <img src="{{image.urls.small}}" alt="Card image cap">
+    </div>
+
+</div>
+
+<app-list-paginator  (actualPageChange)="onActualPageChange($event)" [actual-page]="actualPage"
+          [number-page]="imagePageData?.total_pages"></app-list-paginator>
