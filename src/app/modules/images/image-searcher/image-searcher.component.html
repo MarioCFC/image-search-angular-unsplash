@@ -2,7 +2,7 @@
 
 <div class="container">
 
-    <div *ngFor="let image of imagePageData?.results">
+    <div *ngFor="let image of imagePageData?.results" (click)="goToImageDetais(image.id)">
         <img src="{{image.urls.small}}" alt="Card image cap">
     </div>
 

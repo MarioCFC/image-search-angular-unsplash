@@ -1,22 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { IPage } from 'src/app/shared/models-interfaces/IPage';
-import { Result } from 'src/app/shared/models-interfaces/IResult';
 import { UnsplashService } from 'src/app/shared/unsplash.service';
-
+import { Routes, RouterModule, Router, ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'app-home-searcher',
-  templateUrl: './home-searcher.component.html',
-  styleUrls: ['./home-searcher.component.css']
+  selector: 'app-image-searcher',
+  templateUrl: './image-searcher.component.html',
+  styleUrls: ['./image-searcher.component.css']
 })
-export class HomeSearcherComponent implements OnInit {
+
+
+export class ImageSearcherComponent implements OnInit {
 
   private imagePageData:IPage;
   private actualQuery:string;
   private actualPage:number = 1;
 
-  constructor(private service:UnsplashService) {
+  constructor(private service:UnsplashService,private router: Router, private route: ActivatedRoute) {
   }
 
+  goToImageDetais(id:string) {
+    this.router.navigate([`searcher/image/${id}`]);
+  }
 
   ngOnInit() {
   }

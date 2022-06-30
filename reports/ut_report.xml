@@ -1,0 +1,179 @@
+<testExecutions version="1">
+  <file path="src/app/modules/home/home-searcher/home-searcher.component.spec.ts">
+    <testCase name="HomeSearcherComponent should create" duration="112">
+      <failure message="Error">1. If 'app-search-bar' is an Angular component, then verify that it is part of this module.
+2. If 'app-search-bar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR -&gt;]&lt;app-search-bar (searchEvent)="getSearchEvent($event)"&gt;&lt;/app-search-bar&gt;
+&lt;div class="container"&gt;
+1. If 'app-list-paginator' is an Angular component and it has 'actual-page' input, then verify that it is part of this module.
+2. If 'app-list-paginator' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. ("
+&lt;/div&gt;
+error properties: Object({ ngSyntaxError: true, ngParseErrors: [ 'app-search-bar' is not a known element:
+"): ng:///DynamicTestModule/HomeSearcherComponent.html@0:0, Can't bind to 'actual-page' since it isn't a known property of 'app-list-paginator'.
+&lt;app-list-paginator  (actualPag ...
+    at &lt;Jasmine&gt;
+    at syntaxError (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:2175:1)
+    at TemplateParser.parse (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:11169:1)
+    at JitCompiler._parseTemplate (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25541:1)
+    at JitCompiler._compileTemplate (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25529:61)
+    at http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25473:1
+    at &lt;Jasmine&gt;
+    at JitCompiler._compileComponents (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25473:1)
+    at http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25393:1
+    at Object.then (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:2166:27)
+    at JitCompiler._compileModuleAndAllComponents (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25391:1)
+
+1. If 'app-search-bar' is an Angular component, then verify that it is part of this module.
+2. If 'app-search-bar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR -&gt;]&lt;app-search-bar (searchEvent)="getSearchEvent($event)"&gt;&lt;/app-search-bar&gt;
+&lt;div class="container"&gt;
+1. If 'app-list-paginator' is an Angular component and it has 'actual-page' input, then verify that it is part of this module.
+2. If 'app-list-paginator' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component. ("
+&lt;/div&gt;
+error properties: Object({ ngSyntaxError: true, ngParseErrors: [ 'app-search-bar' is not a known element:
+"): ng:///DynamicTestModule/HomeSearcherComponent.html@0:0, Can't bind to 'actual-page' since it isn't a known property of 'app-list-paginator'.
+&lt;app-list-paginator  (actualPag ...
+    at &lt;Jasmine&gt;
+    at syntaxError (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:2175:1)
+    at TemplateParser.parse (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:11169:1)
+    at JitCompiler._parseTemplate (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25541:1)
+    at JitCompiler._compileTemplate (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25529:61)
+    at http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25473:1
+    at &lt;Jasmine&gt;
+    at JitCompiler._compileComponents (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25473:1)
+    at http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25393:1
+    at Object.then (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:2166:27)
+    at JitCompiler._compileModuleAndAllComponents (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25391:1)
+
+Error: Expected undefined to be truthy.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (http://localhost:9876/_karma_webpack_/webpack:/src/app/modules/home/home-searcher/home-searcher.component.spec.ts:23:23)
+    at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-evergreen.js:359:1)
+    at ProxyZoneSpec.push../node_modules/zone.js/dist/zone-testing.js.ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-testing.js:308:1)
+</failure>
+    </testCase>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="35"/>
+    <testCase name="AppComponent should render title in a h1 tag" duration="20">
+      <failure message="Error">TypeError: Cannot read properties of null (reading 'textContent')
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (http://localhost:9876/_karma_webpack_/webpack:/src/app/app.component.spec.ts:33:40)
+    at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-evergreen.js:359:1)
+    at ProxyZoneSpec.push../node_modules/zone.js/dist/zone-testing.js.ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-testing.js:308:1)
+    at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-evergreen.js:358:1)
+    at Zone.run (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-evergreen.js:124:1)
+    at runInTestZone (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-testing.js:561:1)
+    at UserContext.&lt;anonymous&gt; (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-testing.js:576:1)
+    at &lt;Jasmine&gt;
+</failure>
+    </testCase>
+    <testCase name="AppComponent should have as title 'image-search-angular-unsplash'" duration="15"/>
+  </file>
+  <file path="src/app/shared/unsplash.service.spec.ts">
+    <testCase name="UnsplashService should be created" duration="5">
+      <failure message="Error">NullInjectorError: StaticInjectorError[UnsplashService]: 
+  NullInjectorError: No provider for UnsplashService!
+error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ Function ] })
+    at &lt;Jasmine&gt;
+    at NullInjector.get (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/core/fesm2015/core.js:1354:1)
+    at resolveToken (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/core/fesm2015/core.js:1681:1)
+    at tryResolveToken (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/core/fesm2015/core.js:1607:1)
+    at StaticInjector.get (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/core/fesm2015/core.js:1470:1)
+    at TestBedViewEngine.get (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/core/fesm2015/testing.js:3238:1)
+    at Function.get (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/core/fesm2015/testing.js:2960:1)
+    at UserContext.&lt;anonymous&gt; (http://localhost:9876/_karma_webpack_/webpack:/src/app/shared/unsplash.service.spec.ts:9:46)
+    at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-evergreen.js:359:1)
+    at ProxyZoneSpec.push../node_modules/zone.js/dist/zone-testing.js.ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-testing.js:308:1)
+    at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-evergreen.js:358:1)
+</failure>
+    </testCase>
+  </file>
+  <file path="src/app/shared/list-paginator/list-paginator.component.spec.ts">
+    <testCase name="ListPaginatorComponent should create" duration="52"/>
+  </file>
+  <file path="src/app/shared/search-bar/search-bar.component.spec.ts">
+    <testCase name="SearchBarComponent should create" duration="11">
+      <failure message="Error">1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("&lt;form class="search-bar-form"&gt;
+  [ERROR -&gt;]&lt;mat-form-field appearance="outline"&gt;
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;/mat-form-field&gt;
+  &lt;button (click)="searhEvent()" mat-raised-button color="primary" &gt;
+    [ERROR -&gt;]&lt;mat-icon&gt;search&lt;/mat-icon&gt;
+  &lt;/button&gt;
+'mat-form-field' is not a known element:
+1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("&lt;form class="search-bar-form"&gt;
+  [ERROR -&gt;]&lt;mat-form-field appearance="outline"&gt;
+    &lt;input #queryInput matInput (keyup.enter)="searhEvent()" pl"): ng:///DynamicTestModule/SearchBarComponent.html@1:2
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;/mat-form-field&gt;
+  &lt;button (click)="searhEvent()" mat-raised-button color="primary" &gt;
+    [ERROR -&gt;]&lt;mat-icon&gt;search&lt;/mat-icon&gt;
+  &lt;/button&gt;
+&lt;/form&gt;"): ng:///DynamicTestModule/SearchBarComponent.html@5:4
+error properties: Object({ ngSyntaxError: true, ngParseErrors: [ 'mat-form-field' is not a known element:
+    &lt;input #queryInput matInput (keyup.enter)="searhEvent()" pl"): ng:///DynamicTestModule/SearchBarComponent.html@1:2, 'mat-icon' is not a known element:
+&lt;/form&gt;"): ng:///DynamicTestModule/SearchBarComponent.html@5:4 ...
+Error: Template parse errors:
+    at syntaxError (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:2175:1)
+    at TemplateParser.parse (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:11169:1)
+    at JitCompiler._parseTemplate (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25541:1)
+    at JitCompiler._compileTemplate (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25529:61)
+    at http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25473:1
+    at &lt;Jasmine&gt;
+    at JitCompiler._compileComponents (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25473:1)
+    at http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25393:1
+    at Object.then (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:2166:27)
+    at JitCompiler._compileModuleAndAllComponents (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25391:1)
+
+1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("&lt;form class="search-bar-form"&gt;
+  [ERROR -&gt;]&lt;mat-form-field appearance="outline"&gt;
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;/mat-form-field&gt;
+  &lt;button (click)="searhEvent()" mat-raised-button color="primary" &gt;
+    [ERROR -&gt;]&lt;mat-icon&gt;search&lt;/mat-icon&gt;
+  &lt;/button&gt;
+Error: Template parse errors:
+'mat-form-field' is not a known element:
+1. If 'mat-form-field' is an Angular component, then verify that it is part of this module.
+2. If 'mat-form-field' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("&lt;form class="search-bar-form"&gt;
+  [ERROR -&gt;]&lt;mat-form-field appearance="outline"&gt;
+    &lt;input #queryInput matInput (keyup.enter)="searhEvent()" pl"): ng:///DynamicTestModule/SearchBarComponent.html@1:2
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;/mat-form-field&gt;
+  &lt;button (click)="searhEvent()" mat-raised-button color="primary" &gt;
+    [ERROR -&gt;]&lt;mat-icon&gt;search&lt;/mat-icon&gt;
+  &lt;/button&gt;
+&lt;/form&gt;"): ng:///DynamicTestModule/SearchBarComponent.html@5:4
+error properties: Object({ ngSyntaxError: true, ngParseErrors: [ 'mat-form-field' is not a known element:
+    &lt;input #queryInput matInput (keyup.enter)="searhEvent()" pl"): ng:///DynamicTestModule/SearchBarComponent.html@1:2, 'mat-icon' is not a known element:
+&lt;/form&gt;"): ng:///DynamicTestModule/SearchBarComponent.html@5:4 ...
+    at syntaxError (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:2175:1)
+    at TemplateParser.parse (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:11169:1)
+    at JitCompiler._parseTemplate (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25541:1)
+    at JitCompiler._compileTemplate (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25529:61)
+    at http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25473:1
+    at &lt;Jasmine&gt;
+    at JitCompiler._compileComponents (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25473:1)
+    at http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25393:1
+    at Object.then (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:2166:27)
+    at JitCompiler._compileModuleAndAllComponents (http://localhost:9876/_karma_webpack_/webpack:/node_modules/@angular/compiler/fesm2015/compiler.js:25391:1)
+
+Error: Expected undefined to be truthy.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (http://localhost:9876/_karma_webpack_/webpack:/src/app/shared/search-bar/search-bar.component.spec.ts:23:23)
+    at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-evergreen.js:359:1)
+    at ProxyZoneSpec.push../node_modules/zone.js/dist/zone-testing.js.ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-testing.js:308:1)
+</failure>
+    </testCase>
+  </file>
+</testExecutions>
