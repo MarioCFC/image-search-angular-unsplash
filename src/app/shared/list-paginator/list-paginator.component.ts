@@ -1,5 +1,4 @@
 import { Component, DoCheck, EventEmitter, Input, OnInit, Output, SimpleChange, SimpleChanges } from '@angular/core';
-//TODO:Take a look when there are no pages or when the number of items is less than we expected
 @Component({
   selector: 'app-list-paginator',
   templateUrl: './list-paginator.component.html',
@@ -12,7 +11,8 @@ export class ListPaginatorComponent implements OnInit{
 
   @Input('actual-page') actualPage: number;
   @Input('number-page') numberOfPages: number;
-  @Input('paginator-size') paginatorSize: number;
+  @Input('paginator-size') defaultPaginatorSize: number;
+  private finalPaginatorSize;
 
   @Output() actualPageChange = new EventEmitter<number>();
   constructor() {
@@ -22,18 +22,14 @@ export class ListPaginatorComponent implements OnInit{
     
   }
 
-  //I think that this is necesary because we have to wait that the data of the list it be passed to the component
-  //so we need to check if there are changes to upgrate the paginator
   ngOnChanges(changes: SimpleChanges): void {
 
-    if(changes.numberOfPages && changes.numberOfPages.currentValue && this.isFirstLoad){
+    if((changes.numberOfPages && changes.numberOfPages.currentValue) || (changes.actualPage && changes.actualPage.currentValue )){
     this.checkPaginatoSizeForARange();
-    this.paginatorNumbers = new Array<number>(this.paginatorSize);
+    this.paginatorNumbers = new Array<number>(this.finalPaginatorSize);
     this.upgradePaginatorPages();
+    this.updateArrowButtonsState();
 
-    this.isFirstLoad = false;
-    }else if(changes.actualPage && changes.actualPage.currentValue && !this.isFirstLoad){
-      this.upgradePaginatorPages();
     }
 
   }
@@ -44,7 +40,6 @@ export class ListPaginatorComponent implements OnInit{
 
   changePage(newPage:number){
    this.actualPage = newPage;
-   //Evento emitido
    this.actualPageChange.emit(this.actualPage)
     this.upgradePaginatorPages();
     this.updateArrowButtonsState();
@@ -55,12 +50,15 @@ export class ListPaginatorComponent implements OnInit{
       throw new Error("It has not specific the number of pages")
     }
 
-    if(!this.paginatorSize){
-      this.paginatorSize = 3;
+
+    if(!this.defaultPaginatorSize){
+      this.finalPaginatorSize = 3;
+    }else{
+      this.finalPaginatorSize = this.defaultPaginatorSize;
     }
 
-    if(this.paginatorSize > this.numberOfPages){
-        this.paginatorSize = this.numberOfPages;
+    if(this.finalPaginatorSize > this.numberOfPages){
+        this.finalPaginatorSize = this.numberOfPages;
     }
     
   }
@@ -71,37 +69,37 @@ export class ListPaginatorComponent implements OnInit{
 
   getFirstElementOfPaginator(){
 
-    let amountOfOneSidePaginatorNumbers = Math.floor(this.paginatorSize / 2.0);
+    let amountOfOneSidePaginatorNumbers = Math.floor(this.finalPaginatorSize / 2.0);
     let pageInBoundsInferiorLimit = (this.actualPage >= 1 + amountOfOneSidePaginatorNumbers)
     let pageInBoundsSuperiorLimit = (this.actualPage < this.numberOfPages - amountOfOneSidePaginatorNumbers);
-    //TODO:Comprobar
    
-    //Get paginator first element
-    if(pageInBoundsInferiorLimit && pageInBoundsSuperiorLimit){
+    if(this.finalPaginatorSize == 1){
+      return 1;
+    } else if(pageInBoundsInferiorLimit && pageInBoundsSuperiorLimit){
       return this.actualPage - amountOfOneSidePaginatorNumbers;
 
     }else if(!pageInBoundsInferiorLimit && this.actualPage >= 1){
       return 1;
 
     }else if(!pageInBoundsSuperiorLimit && this.actualPage < this.numberOfPages){
-      return this.numberOfPages - this.paginatorSize;
+      return this.numberOfPages - this.finalPaginatorSize;
     }
   }
 
 
-  //TODO:Asignar variables
   calculatePaginatorNumbers(firstElement:number):number[]{
     let paginatorNumbers = new Array<number>();
-    for(let i = 0; i < this.paginatorSize ; i++){
+    for(let i = 0; i < this.finalPaginatorSize ; i++){
       paginatorNumbers.push(firstElement + i);
     }
     return paginatorNumbers;
   }
 
-   //TODO:Revisar logica con la ultima pagina
   
    updateArrowButtonsState() {
-    if (this.actualPage == 1) {
+    if(this.finalPaginatorSize == 1){
+      this.buttonState = [false,false];
+    }else if (this.actualPage == 1) {
 
       this.buttonState = [false,true];
     } else if (this.actualPage == this.numberOfPages - 1) {

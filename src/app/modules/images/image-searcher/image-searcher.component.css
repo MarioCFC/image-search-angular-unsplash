@@ -1,5 +1,5 @@
 
-.container {
+.image-wrapper {
     columns: 3;
 }
 
@@ -9,4 +9,9 @@ img{
 
 app-search-bar{
     margin: auto;
+}
+
+.message{
+    margin-top: 200px;
+    text-align: center;
 }

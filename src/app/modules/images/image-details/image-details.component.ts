@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UnsplashService } from 'src/app/shared/unsplash.service';
 
 @Component({
@@ -13,8 +12,8 @@ export class ImageDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location,
-    private service:UnsplashService
+    private service:UnsplashService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -33,4 +32,8 @@ export class ImageDetailsComponent implements OnInit {
       );
   }
 
+
+  searchTag(tagTitle:string) {
+    this.router.navigate([`searcher/search/${tagTitle}`]);
+  }
 }

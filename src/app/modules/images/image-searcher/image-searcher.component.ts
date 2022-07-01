@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UnsplashService } from 'src/app/shared/unsplash.service';
 import {Router, ActivatedRoute } from '@angular/router';
 import { IPage } from 'src/app/shared/models-interfaces/image-search-interfaces/IPage';
@@ -14,8 +14,10 @@ export class ImageSearcherComponent implements OnInit {
   private imagePageData:IPage;
   private actualQuery:string;
   private actualPage:number = 1;
+  private queryError:boolean = false;
 
-  constructor(private service:UnsplashService,private router: Router, private route: ActivatedRoute) {
+  
+  constructor(private service:UnsplashService,private router: Router,private route: ActivatedRoute) {
   }
 
   goToImageDetais(id:string) {
@@ -23,6 +25,8 @@ export class ImageSearcherComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.actualQuery = this.route.snapshot.paramMap.get('query');
+    this.searchImage(this.actualQuery,1);
   }
 
 
@@ -30,20 +34,21 @@ export class ImageSearcherComponent implements OnInit {
     this.service.searchImage(query,page).subscribe(
       resp=>{
         this.imagePageData = resp;
-        //TODO:Mirar lo del atributo results
+        this.queryError = false;
       },
       error=>{
-        console.log("Error caborn")
+        this.queryError = true;
       }
     )
   }
 
-  //When the query arrives it will be validated
   
   getSearchEvent(newQuery:string){
     this.actualQuery = newQuery
     this.actualPage = 1;
     this.searchImage(newQuery,this.actualPage);
+    
+    this.router.navigate([`searcher/search/${newQuery}`]);
   }
 
   onActualPageChange(newPage:number){

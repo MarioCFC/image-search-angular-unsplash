@@ -7,7 +7,6 @@ import { MatFormFieldModule, MatIconModule, MatInputModule } from "@angular/mate
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {MatButtonModule} from '@angular/material/button';
 import { ListPaginatorComponent } from "./list-paginator/list-paginator.component";
-//TODO:Mirar si hay que declarar el servicio
 @NgModule({
   declarations: [SearchBarComponent,ListPaginatorComponent],
   imports: [

@@ -1,6 +1,10 @@
+import { IUrls } from "../IUrls"
 import { ICurrentUserCollection } from "./ICurrentUserCollection"
 import { IExif } from "./IExif"
+import { ILinksImageDetails } from "./ILinksImageDetails"
+import { ILocation } from "./ILocation"
 import { ITag } from "./ITag"
+import { IUserImageDetails } from "./IUserImageDetails"
 
 export interface IImageDetails {
     id: string
@@ -16,10 +20,10 @@ export interface IImageDetails {
     public_domain: boolean
     description: string
     exif: IExif
-    location: Location
+    location: ILocation
     tags: ITag[]
-    current_user_collections:   ICurrentUserCollection[]
-    urls: Urls
-    links: ILinks
-    user: User
+    current_user_collections: ICurrentUserCollection[]
+    urls: IUrls
+    links: ILinksImageDetails
+    user: IUserImageDetails
   }

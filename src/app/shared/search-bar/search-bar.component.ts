@@ -1,7 +1,6 @@
-import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 
 
-//TODO:Set the same button height as of the search bar  
 @Component({
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
