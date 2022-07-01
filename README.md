@@ -5,6 +5,8 @@ To be able to use this application it is neccesary create a developer acount in 
 "src\app\shared\unsplash.service.ts" service, in the variable "unsplash_api_key". 
 
 
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
 
 ## Development server
