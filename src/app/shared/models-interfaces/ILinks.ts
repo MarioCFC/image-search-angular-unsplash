@@ -1,6 +1,4 @@
-export interface Links {
+export interface ILinks {
   self: string
   html: string
-  photos: string
-  likes: string
 }

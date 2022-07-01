@@ -1,4 +1,4 @@
-export interface Urls {
+export interface IUrls {
   raw: string
   full: string
   regular: string

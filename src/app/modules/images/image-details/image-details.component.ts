@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { UnsplashService } from 'src/app/shared/unsplash.service';
 
 @Component({
   selector: 'app-image-details',
@@ -8,18 +9,28 @@ import { Location } from '@angular/common';
   styleUrls: ['./image-details.component.css']
 })
 export class ImageDetailsComponent implements OnInit {
+  private imageDetails;
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private service:UnsplashService
   ) { }
 
   ngOnInit() {
-    this.getImageId();
+    this.loadImageDetails();
   }
 
-  getImageId(): void {
+  loadImageDetails(): void {
+    
     const id = this.route.snapshot.paramMap.get('id');
+    this.service.getImageDetails(id).subscribe(
+      resp=>{
+        this.imageDetails = resp;
+      },
+      error=>
+        console.log("Error peticiones detalles")
+      );
   }
 
 }

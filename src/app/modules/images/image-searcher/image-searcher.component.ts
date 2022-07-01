@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IPage } from 'src/app/shared/models-interfaces/IPage';
 import { UnsplashService } from 'src/app/shared/unsplash.service';
-import { Routes, RouterModule, Router, ActivatedRoute } from '@angular/router';
+import {Router, ActivatedRoute } from '@angular/router';
+import { IPage } from 'src/app/shared/models-interfaces/image-search-interfaces/IPage';
 @Component({
   selector: 'app-image-searcher',
   templateUrl: './image-searcher.component.html',

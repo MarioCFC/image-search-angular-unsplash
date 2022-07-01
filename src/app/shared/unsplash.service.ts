@@ -1,11 +1,11 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
-import { IPage } from "./models-interfaces/IPage";
+import { IPage } from "./models-interfaces/image-search-interfaces/IPage";
 
 @Injectable()
 export class UnsplashService {
   private readonly unsplashUrl: string = "https://api.unsplash.com/";
-  private client_id = "UNSPLASH_API_KEY";
+  private client_id = "0DNz7Ioo8lvZ1NlRzMDoTvZurqm81lpP02jIbpI5rpE";
 
   constructor(private http: HttpClient) {}
 
@@ -19,7 +19,6 @@ export class UnsplashService {
   }
 
   getImageDetails(idImage:string){
-
 
     let options = {
       params: new HttpParams().append("client_id", this.client_id)

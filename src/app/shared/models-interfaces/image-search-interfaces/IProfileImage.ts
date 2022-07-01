@@ -1,4 +1,4 @@
-export interface ProfileImage {
+export interface IProfileImage {
   small: string
   medium: string
   large: string
